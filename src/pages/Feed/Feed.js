@@ -122,10 +122,12 @@ class Feed extends Component {
     formData.append("content", postData.content);
     formData.append("image", postData.image);
 
-    let url = "http://localhost:8080/feed/post";
+    let url = "https://safe-dusk-64983.herokuapp.com/feed/post";
     let method = "POST";
     if (this.state.editPost) {
-      url = "http://localhost:8080/feed/post/" + this.state.editPost._id;
+      url =
+        "https://safe-dusk-64983.herokuapp.com/feed/post/" +
+        this.state.editPost._id;
       method = "PUT";
     }
 
